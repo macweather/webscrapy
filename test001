@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jun 14 00:44:25 2017
+
+@author: macweather
+"""
+
+import requests
+#送出GET請求到遠端伺服器，伺服器接受請求後回傳<Response [200]>，代表請求成功
+A136 = requests.get ( "http://opendata.cwb.gov.tw/opendataapi?dataid=O-A0002-001&authorizationkey=CWB-77EC0257-F288-4460-A733-6249F49F0A64" )
+A136.encoding='utf-8'
+print (A136.text)
